@@ -14,7 +14,6 @@ tfnet = TFNet(option)
 capture = cv2.VideoCapture('film.avi')
 
 def file():
-    #[capture.read() for i in range(4)]
     [capture.read() for i in range(4)]
     _, img = capture.read()
     return img
