@@ -34,7 +34,6 @@ def median_filter(x, window=3):
     for i in range(0, len(x)-(window-1), 1):
         median = np.median(x[i:i+window])
         x_filtered.append(median)
-    # x_filtered.append(x[len(x)-1])
     return x_filtered
 
 while True:
@@ -52,6 +51,7 @@ while True:
     if cv2.waitKey(1) & 0xFF == ord('q'):
         cv2.destroyAllWindows()
         break
+
 data1 = median_filter(data)
 plt.plot(data)
 plt.plot(data1)
